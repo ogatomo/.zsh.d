@@ -43,3 +43,4 @@ fpath=(~/.zsh.d/Completion $fpath)
 
 unset SSH_AUTH_SOCK
 
+tmux
