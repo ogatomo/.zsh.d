@@ -1,8 +1,6 @@
-export PYTHON_BIN=/opt/local/Library/Frameworks/Python.framework/Versions/Current/bin/
-export PATH=/opt/local/bin:/opt/local/sbin/:~/bin:/Developer/Tools:$PYTHON_BIN:$PATH
+export PATH=/usr/local/bin::~/bin:/Developer/Tools:$PATH
 export PATH=~/Applications/android-sdk-macosx/platform-tools/:$PATH
-export MANPATH=/opt/local/man:$MANPATH
-export SSL_CERT_FILE=/opt/local/share/curl/curl-ca-bundle.crt
+export MANPATH=/usr/local/man:$MANPATH
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
