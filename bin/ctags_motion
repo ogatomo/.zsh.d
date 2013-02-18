@@ -1,0 +1,14 @@
+#!/bin/sh
+s="\t "
+S="[$s]*"
+w="_a-zA-Z0-9"
+CN="[A-Z][$w]*"
+NM="[$w][$w]*"
+
+SDK="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks"
+
+find $SDK -name "*.h" | xargs ctags -e -a --langmap=ObjectiveC:.m.h -o objc.TAGS
+
+
+
+
