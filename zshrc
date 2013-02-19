@@ -14,8 +14,6 @@ alias lf="ls -F"
 alias ll="ls -l"
 alias tmux="tmux -f ~/.zsh.d/tmux.conf"
 
-bindkey -e
-
 autoload -U compinit
 compinit
 

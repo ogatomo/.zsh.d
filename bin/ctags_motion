@@ -7,8 +7,10 @@ NM="[$w][$w]*"
 
 SDK="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks"
 
-find $SDK -name "*.h" | xargs ctags -e -a --langmap=ObjectiveC:.m.h -o objc.TAGS
+RUBY_VERSION=`rbenv global`
 
+cd ~/.rbenv/versions/$RUBY_VERSION/lib/ruby/gems/1.9.1/gems
 
+GEMS=`pwd`
 
-
+find $SDK $GEMS -regex "\.\(h\|m\|mm\|rb\)" | xargs ctags -e -a --langmap=ObjectiveC:.m.h,Ruby:.rb -o motion.TAGS

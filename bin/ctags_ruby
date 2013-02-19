@@ -1,0 +1,10 @@
+#!/bin/sh
+RUBY_VERSION=`rbenv global`
+
+CD=`pwd`
+
+cd ~/.rbenv/versions/$RUBY_VERSION/lib/ruby/gems/1.9.1/gems
+
+GEMS=`pwd`
+
+find $GEMS $CD -name "*.rb" | xargs ctags -e -a --langmap=Ruby:.rb -o ruby.TAGS
