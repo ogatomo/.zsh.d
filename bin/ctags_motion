@@ -13,4 +13,22 @@ cd ~/.rbenv/versions/$RUBY_VERSION/lib/ruby/gems/1.9.1/gems
 
 GEMS=`pwd`
 
-find $SDK $GEMS -regex "\.\(h\|m\|mm\|rb\)" | xargs ctags -e -a --langmap=ObjectiveC:.m.h,Ruby:.rb -o motion.TAGS
+cd ~/.emacs.d/share/tags
+
+TAG_DIR=`pwd`
+
+find $SDK  -iregex ".*\.h$" | xargs ctags -e -a --langmap=ObjectiveC:.m.h.mm -o /tmp/objc.TAGS
+find $GEMS -iregex ".*\.rb$"| xargs ctags -e -a --langmap=Ruby:.rb -o /tmp/ruby.TAGS
+
+cat /tmp/objc.TAGS > $TAG_DIR/ruby.TAGS
+cat /tmp/ruby.TAGS >> $TAG_DIR/ruby.TAGS
+
+rm -f /tmp/*.TAGS
+
+
+
+
+
+
+
+
