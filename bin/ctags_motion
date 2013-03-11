@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 s="\t "
 S="[$s]*"
 w="_a-zA-Z0-9"
@@ -22,6 +22,18 @@ find $GEMS -iregex ".*\.rb$"| xargs ctags -e -a --langmap=Ruby:.rb -o /tmp/ruby.
 
 cat /tmp/objc.TAGS > $TAG_DIR/ruby.TAGS
 cat /tmp/ruby.TAGS >> $TAG_DIR/ruby.TAGS
+
+if [ -e ~/Documents/xcode/lib ]; then
+    cd ~/Documents/xcode/lib
+    
+    XCODE_LIB=`pwd`
+    
+    find $XCODE_LIB -iregex ".*\.h$"| xargs ctags -e -a --langmap=ObjectiveC:.h -o /tmp/objc_lib_h.TAGS
+    find $XCODE_LIB -iregex ".*\.m$"| xargs ctags -e -a --langmap=ObjectiveC:.m -o /tmp/objc_lib_m.TAGS
+
+    cat /tmp/objc_lib_h.TAGS >> $TAG_DIR/ruby.TAGS
+    cat /tmp/objc_lib_m.TAGS >> $TAG_DIR/ruby.TAGS
+fi
 
 rm -f /tmp/*.TAGS
 
