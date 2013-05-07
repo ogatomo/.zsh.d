@@ -16,9 +16,6 @@ alias lf="ls -F"
 alias ll="ls -l"
 alias tmux="tmux -f ~/.zsh.d/tmux.conf"
 
-autoload -U compinit
-compinit
-
 HISTFILE=~/.zsh_history
 HISTSIZE=600000
 SAVEHIST=65535
@@ -32,11 +29,6 @@ SPROMPT="%r is correct? [n,y,a,e]: "
 
 export LANG=ja_JP.UTF-8
 
-zstyle ':completion:*' accept-exact '*(N)'
-
 bindkey -e
-
-. ~/.zsh.d/rb_optparse.zsh
-fpath=(~/.zsh.d/Completion $fpath)
 
 unset SSH_AUTH_SOCK
