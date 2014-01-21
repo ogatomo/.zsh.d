@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin::~/bin:/Developer/Tools:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:/Developer/Tools:$PATH
 export PATH=~/Applications/android-sdk-macosx/platform-tools/:$PATH
 export MANPATH=/usr/local/man:$MANPATH
 
