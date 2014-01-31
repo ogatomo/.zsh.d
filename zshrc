@@ -1,6 +1,7 @@
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:/Developer/Tools:$PATH
 export MANPATH=/usr/local/man:$MANPATH
 
+export RBENV_ROOT=/usr/local/var/rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
 
