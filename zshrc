@@ -1,33 +1,69 @@
-export PATH=/usr/local/bin:/usr/local/sbin:~/bin:/Developer/Tools:$PATH
-export MANPATH=/usr/local/man:$MANPATH
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.zsh.d/oh-my-zsh
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init - zsh)"
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="robbyrussell"
 
-export PATH="/usr/local/share/npm/bin:$PATH"
+# Example aliases
+alias zshconfig="mate ~/.zsh.d/zshrc"
+alias ohmyzsh="mate ~/.zsh.d/oh-my-zsh"
 
-export LSCOLORS=exfxcxdxbxegedabagacad
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
 
-alias ls="ls -G"
-alias la="ls -a"
-alias lf="ls -F"
-alias ll="ls -l"
-alias tmux="tmux -f ~/.zsh.d/tmux.conf"
+# Uncomment this to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
 
-HISTFILE=~/.zsh_history
-HISTSIZE=600000
-SAVEHIST=65535
+# Uncomment to change how often before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
 
-setopt hist_ignore_dups     # ignore duplication command history list
-setopt share_history        # share command history data
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
 
-PROMPT="%/%% "
-PROMPT2="%_%% "
-SPROMPT="%r is correct? [n,y,a,e]: "
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-export LANG=ja_JP.UTF-8
+# Uncomment following line if you want to disable command autocorrection
+# DISABLE_CORRECTION="true"
 
-bindkey -e
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
 
-unset SSH_AUTH_SOCK
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment following line if you want to  shown in the command execution time stamp 
+# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
+# yyyy-mm-dd
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:~/bin:/Developer/Tools:$PATH
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# # Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
