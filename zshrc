@@ -51,7 +51,11 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+export RBENV_ROOT=/usr/local/var/rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:/usr/local/sbin:~/bin:/Developer/Tools:$PATH
+eval "$(rbenv init - zsh)"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
