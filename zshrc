@@ -71,3 +71,4 @@ eval "$(rbenv init - zsh)"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+unset SSH_AUTH_SOCK
